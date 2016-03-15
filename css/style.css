@@ -1,0 +1,247 @@
+body{
+	margin: 0px;
+	color: #c4c4c4;
+	font-family: Consolas, monaco, monospace;
+	font-size: 17px;
+	background-color: #303030;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+}
+
+a{
+	color: #9ece9e;
+}
+
+a:hover{
+	color: #ffd7a7;
+}
+
+.full-width{
+	width: 100%;
+}
+
+.console-width{
+	max-width: 1026px;
+	margin: 0px auto 0px auto;
+	padding: 13px 0px;
+	border-left: 1px dotted #383838;
+	border-right: 1px dotted #383838;
+}
+
+.cont{
+	padding: 13px 10px;
+}
+
+.center{
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.lang{
+	color: #f8f893;
+}
+
+.var{
+	color: #ffd7a7;
+}
+
+.raster{
+	color: #dc8c6c;
+}
+
+.dijkstra{
+	background-color: #383838;
+}
+
+h3{
+	color: #688060;
+}
+
+#about-me{
+	background-color: #252525;
+}
+
+#about-me-p{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#title-page{
+	height: 100vh;
+	width: 100%;
+}
+
+#title-container{
+	height: 300px;
+	width: 525px;
+	color: #c4c4c4;
+}
+
+#title{
+	font-size: 60px;
+	border-right: .1em solid transparent;
+	margin-bottom: 10px;
+	width: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: type-title 2s steps(16, end) 1s forwards, cursor-blink 1s step-end 4 forwards;
+	animation: type-title 2s steps(16, end) 1s forwards, cursor-blink 1s step-end 4 forwards;
+}
+
+#subtitle{
+	font-size: 30px;
+	font-family: Consolas, Monaco, monospace;
+	border-right: .1em solid transparent;
+	width: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: type-subtitle 2s steps(20, end) 4s forwards, cursor-blink 1s 4s step-end infinite;
+	animation: type-subtitle 2s steps(20, end) 4s forwards, cursor-blink 1s 4s step-end infinite;
+}
+
+#title-page div a{
+	text-align: center;
+}
+
+#nav{
+	font-size: 30px;
+	font-weight: 300;
+	color: #797979;
+	opacity: 0;
+	text-align: center;
+	width: 100%;
+	animation: fadein 0.5s 6s forwards;
+	position: absolute;
+	top: auto;
+	bottom: 0px;
+	padding: 10px 0px;
+	box-shadow: 0 5px 2px -2px #111111;
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	z-index: 2;
+	background-color: #303030;
+}
+
+#nav.scrolled{
+	position: fixed !important;
+	top: 0px !important;
+	bottom: auto !important;
+}
+
+#nav a.active{
+	color: #ffd7a7;
+}
+
+#contact{
+	background-color: #252525;
+}
+
+#port-title{
+	margin-top: 50px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+#port-desc{
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.project-img{
+	background-repeat: repeat;
+	box-shadow: 0px 0px 10px #101010;
+	width: 100%;
+	height: 149px;
+}
+
+.console-width p{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#aicasim{
+	background-image: url('../assets/aicasim.png');
+}
+
+#birdseye{
+	background-image: url('../assets/birdseye.png');
+}
+
+@media screen and (max-width: 700px){
+	#title-container{
+		width: 270px;
+		height: 150px;
+	}
+	#title{
+		font-size: 30px;
+		animation: type-title-sm 2s steps(16, end) 1s forwards, cursor-blink 1s step-end 4 forwards;
+		-webkit-animation: type-title-sm 2s steps(16, end) 1s forwards, cursor-blink 1s step-end 4 forwards;
+	}
+	#subtitle{
+		font-size: 22px;
+		animation: type-subtitle-sm 2s steps(20, end) 4s forwards, cursor-blink 1s 4s step-end infinite;
+		-webkit-animation: type-subtitle-sm 2s steps(20, end) 4s forwards, cursor-blink 1s 4s step-end infinite;
+	}
+	#nav{
+		font-size: 16px;
+	}
+}
+
+@keyframes type-title{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 530px;
+	}
+}
+
+@keyframes type-title-sm{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 264px;
+	}
+}
+
+@keyframes type-subtitle{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 330px;
+	}
+}
+
+@keyframes type-subtitle-sm{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 242px;
+	}
+}
+
+@keyframes cursor-blink{
+	0%{
+		border-color: transparent;
+	}
+	50%{
+		border-color: initial;
+	}
+	100%{
+		border-color: transparent;
+	}
+}
+
+@keyframes fadein{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1; 
+	}
+}
