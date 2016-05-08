@@ -11,14 +11,10 @@ function Adjectives(elementID){
 	this.currentAdj = 0;
 	
 	this.updateAdjective = function(){
-		var randomNum = parseInt(Math.random() * this.adjectives.length);
-		
-		while(randomNum === this.currentAdj){
-			randomNum = parseInt(Math.random() * this.adjectives.length);
-		}
-		this.currentAdj = randomNum;
-		
-		this.element.innerHTML = this.adjectives[randomNum];
+		this.currentAdj++;
+		if(this.currentAdj >= this.adjectives.length)
+			this.currentAdj = 0;
+		this.element.innerHTML = this.adjectives[this.currentAdj];
 	}
 }
 
@@ -66,7 +62,7 @@ function Timekeeper(date, secElementID, yearElementID){
 		this.numSeconds = parseInt(this.numSeconds / 1000);
 	}
 	
-	// Update the html element 
+	// Update the html element that holds the adjective
 	this.updateTime = function(){
 		this.getDate();
 		this.calcYears();
@@ -111,7 +107,7 @@ window.onload = function(){
 	contactLink = document.getElementById("contact-link");
 }
 
-function menu(){
+function pageScrolled(){
 	var titleHeight = title.scrollHeight;
 	var aboutHeight = about.scrollHeight;
 	var portfolioHeight = portfolio.scrollHeight;
@@ -119,7 +115,10 @@ function menu(){
 	var navHeight = nav.scrollHeight;
 	var scroll = window.scrollY;
 	
-	console.log(window.innerHeight);
+	// Show the nav even if the title animation hasn't fully displayed but the user scrolled down
+	if(nav.style.animationDelay != "0s" &&  scroll > titleHeight - navHeight){
+		nav.style.animationDelay = "0s";
+	}
 	
 	// Light up different nav links depending on where the page is scrolled
 	// Contacts page
